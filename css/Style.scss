@@ -58,6 +58,10 @@ body{
 
 .wrapper {
       min-height: 100%;
+      background-image: url(../img/wrapper/fon.png);
+      background-repeat: repeat-x;
+      background-position: 0px 490px;
+      background-size: 100% auto;
    
       display: flex;
       flex-direction: column;  
@@ -201,11 +205,18 @@ color: white;
        @media (max-width:767px){
             padding: 52px 20px 0px 20px;
       }
+        @media (max-width:510px){
+            padding: 52px 0px 0px 20px;
+      }
 		&__container {display: flex;
                   justify-content: space-between;
                   gap: 10px;
                     @media (max-width:1104px) {
                         gap: 10px;
+                       
+                  }
+                   @media (max-width:510px) {
+                        overflow: hidden ; 
                        
                   }
                  
@@ -258,6 +269,7 @@ color: white;
                         display: block;
                         flex-shrink: 0;
                         margin-left: -40px;
+                       
                         }
                   
                 
