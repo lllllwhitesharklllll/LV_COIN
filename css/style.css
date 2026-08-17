@@ -225,6 +225,18 @@ body a {
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
+@media (max-width: 650px) {
+  .header__container {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 510px) {
+  .header__logo img {
+    margin-bottom: 5px;
+    width: 75px;
+    height: 14px;
+  }
+}
 .header__list {
   display: flex;
   align-items: center;
@@ -243,6 +255,12 @@ body a {
 @media (max-width: 965px) {
   .header__list {
     gap: 20px;
+  }
+}
+@media (max-width: 510px) {
+  .header__list {
+    flex-wrap: wrap;
+    row-gap: 0px;
   }
 }
 .header__link {

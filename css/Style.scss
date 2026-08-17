@@ -148,9 +148,15 @@ color: white;
                   justify-content: space-between;
                   align-items: center;  
                   column-gap: 10px;  
+                   @media (max-width:650px) {flex-wrap: wrap;}
 		}
 
 		&__logo {
+                  img{
+                        @media (max-width:510px) {
+                   margin-bottom: 5px;
+                  width: 75px;height: 14px;}}
+                  
 		}
 
 		&__menu {
@@ -170,7 +176,10 @@ color: white;
                         padding-right: 35px;
                   gap: 65px;
             }
-            @media (max-width:965px){gap: 20px;}
+            @media (max-width:965px){gap: 20px;
+            }
+             @media (max-width:510px) {flex-wrap: wrap;
+            row-gap: 0px            ;}
                  
 		}
 
