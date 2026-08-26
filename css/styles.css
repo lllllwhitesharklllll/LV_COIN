@@ -85,28 +85,28 @@ a:focus:not(:focus-visible) {
 
 @font-face {
   font-family: "SF UI Display";
-  src: url("/fonts/SFUIDisplay-Bold.woff2") format("woff2");
+  src: url("../fonts/SFUIDisplay-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "SF UI Display";
-  src: url("/fonts/SFUIDisplay-Heavy.woff2") format("woff2");
+  src: url("../fonts/SFUIDisplay-Heavy.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "SF UI Display";
-  src: url("/fonts/SFUIDisplay-Medium.woff2") format("woff2");
+  src: url("../fonts/SFUIDisplay-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "SF UI Display";
-  src: url("/fonts/SFUIDisplay-Regular.woff2") format("woff2");
+  src: url("../fonts/SFUIDisplay-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -368,6 +368,7 @@ body {
   }
 }
 .buttons__link {
+  max-width: 259px;
   display: inline-flex;
   font-weight: 500;
   font-size: 14px;
@@ -411,7 +412,7 @@ body {
   scroll-margin-top: 180px;
 }
 .oppo {
-  padding-bottom: 130px;
+  padding-bottom: 129px;
 }
 @media (max-width: 1000px) {
   .oppo {
@@ -502,7 +503,7 @@ body {
 }
 
 .partners {
-  padding-bottom: 152px;
+  padding-bottom: 162px;
 }
 @media (max-width: 580px) {
   .partners {
@@ -566,7 +567,7 @@ body {
 }
 
 .contact {
-  padding-top: 60px;
+  padding-top: 55px;
   padding-bottom: 115px;
   background: #3d3d3d;
 }

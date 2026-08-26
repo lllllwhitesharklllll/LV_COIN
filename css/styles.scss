@@ -254,6 +254,7 @@ body {
         flex-wrap: wrap;
     }
     &__link {
+        max-width: 259px;
         display: inline-flex;
         font-weight: 500;
         font-size: 14px;
@@ -301,7 +302,7 @@ body {
     #target-block {
         scroll-margin-top: 180px;
     }
-    padding-bottom: 130px;
+    padding-bottom: 129px;
     @media (max-width: 1000px) {
         padding-bottom: 50px;
     }
@@ -391,7 +392,7 @@ body {
     }
 }
 .partners {
-    padding-bottom: 152px;
+    padding-bottom: 162px;
     @media (max-width: 580px) {
         padding-bottom: 55px;
     }
@@ -449,7 +450,7 @@ body {
     }
 }
 .contact {
-    padding-top: 60px;
+    padding-top: 55px;
     padding-bottom: 115px;
     background: #3d3d3d;
     @media (max-width: 580px) {
