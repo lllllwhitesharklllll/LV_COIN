@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import "nullstyle.scss";
-@import "fonts.scss";
+@import "_nullstyle.scss";
+@import "_fonts.scss";
 
 body {
     background: #242924;
@@ -94,7 +94,7 @@ body {
 
         @media (max-width: 967px) {
             column-gap: 30px;
-            row-gap: 15px;
+            row-gap: 20px;
         }
     }
 
@@ -190,9 +190,11 @@ body {
     flex-grow: 1;
 }
 .hero {
+    overflow: hidden;
     line-height: 1.5;
     margin-bottom: -85px;
     padding-top: 53px;
+
     @media (max-width: 746px) {
         padding-top: 20px;
     }
@@ -233,9 +235,6 @@ body {
             line-height: 15px;
             font-size: 14px;
         }
-    }
-
-    &__buttons {
     }
 
     &__phone {
@@ -306,8 +305,6 @@ body {
     @media (max-width: 1000px) {
         padding-bottom: 50px;
     }
-    &__container {
-    }
 
     &__title {
         margin-bottom: 105px;
@@ -357,9 +354,6 @@ body {
         }
     }
 
-    &__icon {
-    }
-
     &__label {
         font-size: 18px;
         color: #fff;
@@ -395,19 +389,11 @@ body {
         margin-top: -15px;
         line-height: 27px;
     }
-
-    &__text-item {
-    }
-
-    &__description {
-    }
 }
 .partners {
     padding-bottom: 152px;
     @media (max-width: 580px) {
         padding-bottom: 55px;
-    }
-    &__container {
     }
 
     &__title {
@@ -461,9 +447,6 @@ body {
             margin-bottom: 21px;
         }
     }
-
-    &__item-image {
-    }
 }
 .contact {
     padding-top: 60px;
@@ -472,8 +455,6 @@ body {
     @media (max-width: 580px) {
         padding-top: 20px;
         padding-bottom: 55px;
-    }
-    &__container {
     }
 
     &__title {
@@ -541,9 +522,6 @@ body {
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 20px;
-    }
-
-    &__copy {
     }
 
     &__legal {
