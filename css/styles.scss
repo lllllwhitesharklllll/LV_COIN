@@ -94,7 +94,7 @@ body {
 
         @media (max-width: 967px) {
             column-gap: 30px;
-            row-gap: 20px;
+            row-gap: 10px;
         }
     }
 
@@ -121,7 +121,8 @@ body {
         flex-wrap: wrap;
 
         @media (max-width: 967px) {
-            column-gap: 30px;
+            column-gap: 20px;
+            row-gap: 10px;
         }
     }
 
