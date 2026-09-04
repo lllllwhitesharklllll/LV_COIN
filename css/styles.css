@@ -138,6 +138,28 @@ body {
   }
 }
 
+.green {
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  color: #26cf26;
+}
+
+#hero,
+#oppo,
+#partners,
+#contact {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 550px) {
+  #hero,
+  #oppo,
+  #partners,
+  #contact {
+    scroll-margin-top: 160px;
+  }
+}
 .title {
   font-weight: 700;
   font-size: 36px;
@@ -164,28 +186,6 @@ body {
   }
 }
 
-.green {
-  font-weight: 700;
-  font-size: 14px;
-  text-align: center;
-  color: #26cf26;
-}
-
-#hero,
-#oppo,
-#partners,
-#contact {
-  scroll-margin-top: 90px;
-}
-
-@media (max-width: 550px) {
-  #hero,
-  #oppo,
-  #partners,
-  #contact {
-    scroll-margin-top: 160px;
-  }
-}
 .header {
   background: #242924;
   position: sticky;
@@ -645,22 +645,39 @@ body {
 }
 .footer__legal {
   display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
 }
 .footer__link {
+  display: inline-block;
   font-size: 14px;
   color: #26cf26;
   text-decoration: underline;
-  padding: 0px 5px;
+  transition: 0.5s;
 }
 .footer__link:hover {
-  text-decoration: none;
+  color: white;
+  transform: translateY(-2px);
 }
-.footer__link:not(:last-child) {
-  border-right: 1px solid white;
+.footer__link:active {
+  transform: translateY(0);
+  transition: 0.05s;
 }
-.footer__link:first-child {
-  padding-left: 0;
+.footer__link:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 1px;
+  height: 1em;
+  background-color: white;
+  margin-left: 10px;
+  transition: transform 0.5s;
 }
-.footer__link:last-child {
-  padding-right: 0;
+.footer__link:not(:last-child):hover::after {
+  transform: translateY(2px);
+}
+.footer__link:not(:last-child):active::after {
+  transform: translateY(0);
+  transition: 0.05s;
 }/*# sourceMappingURL=styles.css.map */

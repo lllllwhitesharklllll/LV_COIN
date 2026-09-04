@@ -25,6 +25,26 @@ body {
         padding: 0px 20px;
     }
 }
+.green {
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    color: #26cf26;
+}
+#hero,
+#oppo,
+#partners,
+#contact {
+    scroll-margin-top: 90px;
+}
+@media (max-width: 550px) {
+    #hero,
+    #oppo,
+    #partners,
+    #contact {
+        scroll-margin-top: 160px;
+    }
+}
 .title {
     font-weight: 700;
     font-size: 36px;
@@ -47,26 +67,6 @@ body {
     @media (max-width: 550px) {
         padding-left: 90px;
         font-size: 28px;
-    }
-}
-.green {
-    font-weight: 700;
-    font-size: 14px;
-    text-align: center;
-    color: #26cf26;
-}
-#hero,
-#oppo,
-#partners,
-#contact {
-    scroll-margin-top: 90px;
-}
-@media (max-width: 550px) {
-    #hero,
-    #oppo,
-    #partners,
-    #contact {
-        scroll-margin-top: 160px;
     }
 }
 
@@ -511,7 +511,6 @@ body {
         }
     }
 }
-
 .footer {
     padding: 45px 0px;
     border-top: 1px solid #6c6c6c;
@@ -528,24 +527,45 @@ body {
 
     &__legal {
         display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
     }
 
     &__link {
+        display: inline-block;
         font-size: 14px;
         color: #26cf26;
         text-decoration: underline;
-        padding: 0px 5px;
+        transition: 0.5s;
+
         &:hover {
-            text-decoration: none;
+            color: white;
+            transform: translateY(-2px);
         }
-        &:not(:last-child) {
-            border-right: 1px solid white;
+        &:active {
+            transform: translateY(0);
+            transition: 0.05s;
         }
-        &:first-child {
-            padding-left: 0;
+
+        &:not(:last-child)::after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 1px;
+            height: 1em;
+            background-color: white;
+            margin-left: 10px;
+            transition: transform 0.5s;
         }
-        &:last-child {
-            padding-right: 0;
+
+        &:not(:last-child):hover::after {
+            transform: translateY(2px);
+        }
+
+        &:not(:last-child):active::after {
+            transform: translateY(0);
+            transition: 0.05s;
         }
     }
 }
