@@ -1,0 +1,62 @@
+.hero {
+    overflow: hidden;
+    line-height: 1.5;
+    margin-bottom: -85px;
+    padding-top: 53px;
+
+    @media (max-width: 746px) {
+        padding-top: 20px;
+    }
+    @media (max-width: 968px) {
+        margin-bottom: 50px;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: start;
+    }
+
+    &__body {
+        @media (max-width: 540px) {
+            max-width: 195px;
+        }
+    }
+
+    &__title {
+        padding-top: 50px;
+        font-weight: 700;
+        font-size: 64px;
+        color: #fff;
+        margin-bottom: 19px;
+        @media (max-width: 836px) {
+            font-size: 48px;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        color: #fff;
+        max-width: 430px;
+        line-height: 22px;
+        margin-bottom: 54px;
+        @media (max-width: 836px) {
+            line-height: 15px;
+            font-size: 14px;
+        }
+    }
+
+    &__phone {
+        width: 100%;
+        max-width: 605px;
+        height: auto;
+        min-width: 224px;
+        @media (max-width: 836px) {
+        }
+    }
+    &__buttons {
+        @media (max-width: 1200px) {
+            flex-wrap: wrap;
+        }
+    }
+}

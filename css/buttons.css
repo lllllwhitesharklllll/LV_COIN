@@ -1,0 +1,44 @@
+.buttons {
+  display: flex;
+  gap: 30px;
+}
+.buttons__link {
+  max-width: 259px;
+  display: inline-flex;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #26cf26;
+  border: 1px solid #26cf26;
+  border-radius: 40px;
+  padding: 13px 25px;
+  align-items: center;
+  min-width: 259px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 0.5s ease;
+}
+.buttons__link:hover {
+  color: black;
+}
+.buttons__link::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #9cff60 0%, #19cb20 99.48%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.buttons__link:hover::before {
+  opacity: 1;
+}
+.buttons__link--google {
+  gap: 40px;
+}
+.buttons__link--apple {
+  gap: 55px;
+}/*# sourceMappingURL=buttons.css.map */

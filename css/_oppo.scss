@@ -1,0 +1,87 @@
+.oppo {
+    #target-block {
+        scroll-margin-top: 180px;
+    }
+    padding-bottom: 129px;
+    @media (max-width: 1000px) {
+        padding-bottom: 50px;
+    }
+
+    &__title {
+        margin-bottom: 104px;
+        @media (max-width: 640px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @media (max-width: 1000px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            grid-template-columns: repeat(1, minmax(300px, 700px));
+        }
+    }
+
+    &__card {
+        max-width: 700px;
+        width: 100%;
+        padding: 34px 20px 30px 22px;
+        border-radius: 30px;
+        box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.08);
+        background: #393a39;
+        @media (max-width: 1000px) {
+            min-height: 226px;
+        }
+    }
+
+    &__card-header {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 32px;
+        align-items: center;
+        @media (max-width: 640px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__label {
+        font-size: 18px;
+        color: #fff;
+
+        @media (max-width: 1144px) {
+            font-size: 14px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        color: #828282;
+        padding-left: 15px;
+
+        gap: 36px;
+    }
+
+    &__percent-list {
+        margin-top: -14px;
+        line-height: 27px;
+        text-align: center;
+        padding-left: 15px;
+    }
+
+    &__percent-item {
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+        color: #26cf26;
+    }
+
+    &__text-list {
+        margin-top: -15px;
+        line-height: 27px;
+    }
+}

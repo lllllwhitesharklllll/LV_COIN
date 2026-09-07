@@ -1,0 +1,118 @@
+.header {
+    background: #242924;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    line-height: 1.5;
+    @media (max-width: 1025px) {
+        box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.08);
+        background: #383938;
+    }
+
+    &__container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 70px;
+        flex-wrap: wrap;
+
+        @media (max-width: 967px) {
+            column-gap: 30px;
+            row-gap: 10px;
+        }
+    }
+
+    &__logo {
+        flex-shrink: 0;
+
+        @media (max-width: 746px) {
+            width: 75px;
+        }
+    }
+
+    &__menu {
+        font-size: 16px;
+        color: #fff;
+
+        @media (max-width: 746px) {
+            font-size: 14px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 70px;
+        flex-wrap: wrap;
+
+        @media (max-width: 967px) {
+            column-gap: 20px;
+            row-gap: 10px;
+        }
+    }
+
+    &__link {
+        position: relative;
+        transition: color 0.5s ease;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background: #26cf26;
+            left: 0px;
+            bottom: -2px;
+            height: 2px;
+            width: 100%;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.5s ease;
+        }
+
+        &:hover {
+            color: #26cf26;
+
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    &__item--dropdown {
+        position: relative;
+        padding-bottom: 10px;
+        margin-bottom: -10px;
+
+        &:hover .header__lang--eng {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+
+    &__lang--rus {
+        gap: 9px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    &__lang--eng {
+        position: absolute;
+        left: 0px;
+        top: 100%;
+        display: flex;
+        gap: 9px;
+        align-items: center;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(15px);
+        transition:
+            opacity 0.5s ease,
+            visibility 0.5s ease,
+            transform 0.5s ease;
+    }
+}

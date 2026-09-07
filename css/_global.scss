@@ -1,0 +1,70 @@
+body {
+    background: #242924;
+    font-family: "SF UI Display";
+    font-weight: 400;
+}
+.wrapper {
+    background-image: url(../img/wrapper/fon.png);
+    background-repeat: repeat-x;
+    background-position: 0px 490px;
+    background-size: 100% auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @media (max-width: 746px) {
+        padding: 0px 20px;
+    }
+}
+.accent {
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    color: #26cf26;
+}
+#hero,
+#oppo,
+#partners,
+#contact {
+    scroll-margin-top: 90px;
+}
+@media (max-width: 550px) {
+    #hero,
+    #oppo,
+    #partners,
+    #contact {
+        scroll-margin-top: 160px;
+    }
+}
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    color: #fff;
+    padding-left: 121px;
+
+    position: relative;
+    &::before {
+        content: "";
+        border-radius: 50px;
+        width: 66px;
+        height: 23px;
+        background: #26cf26;
+        display: inline-block;
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @media (max-width: 550px) {
+        padding-left: 90px;
+        font-size: 28px;
+    }
+}
+.content {
+    flex-grow: 1;
+}
