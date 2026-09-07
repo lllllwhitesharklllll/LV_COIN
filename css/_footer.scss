@@ -29,5 +29,9 @@
         &:hover {
             text-decoration: none;
         }
+        & + & {
+            padding-left: 10px;
+            border-left: 1px solid #ffffff; /* Белая линия */
+        }
     }
 }

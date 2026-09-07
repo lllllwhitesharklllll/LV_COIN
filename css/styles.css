@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -625,6 +626,10 @@ body {
 }
 .footer__link:hover {
   text-decoration: none;
+}
+.footer__link + .footer__link {
+  padding-left: 10px;
+  border-left: 1px solid #ffffff; /* Белая линия */
 }
 
 .buttons {
