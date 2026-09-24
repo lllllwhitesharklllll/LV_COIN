@@ -45,22 +45,17 @@
         }
     }
 
-    // Выпадающий список языков
     &__lang-dropdown {
         position: relative;
         padding-bottom: 10px;
         margin-bottom: -10px;
         color: #fff;
         font-size: 16px;
-        z-index: 110; // Выше выезжающего меню
+        z-index: 110;
+        order: 3;
 
-        @media (max-width: 767px) {
-            order: 2; // Язык по центру/ближе к правому краю
-            margin-left: auto; // Отталкивает язык и бургер вправо
-        }
-
-        // 1. Ховер работает ТОЛЬКО на компьютерах (от 1025px)
-        @media (min-width: 1025px) {
+        // ИСПРАВЛЕНИЕ 2026: Ховер работает ТОЛЬКО если у устройства ЕСТЬ мышка (независимо от ширины экрана!)
+        @media (hover: hover) {
             &:hover .header__lang-list {
                 opacity: 1;
                 visibility: visible;
@@ -71,7 +66,7 @@
             }
         }
 
-        // 2. На смартфонах работает по классу из JS (ИСПРАВЛЕН СИНТАКСИС БЭМ)
+        // Клик работает на ВСЕХ тач-скринах (смартфоны И большие планшеты вроде iPad Pro)
         &._active {
             .header__lang-list {
                 opacity: 1;
@@ -81,6 +76,10 @@
             .header__lang-arrow {
                 transform: rotate(-180deg);
             }
+        }
+
+        @media (max-width: 767px) {
+            margin-left: auto;
         }
     }
 

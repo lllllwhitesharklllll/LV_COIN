@@ -1,22 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Логика для выбора языка на смартфонах (Исправлено под обе страницы)
     const langDropdown = document.querySelector(".header__lang-dropdown");
-    
-    // Находим ПЕРВУЮ (активную) кнопку внутри дропдауна, независимо от языка
     const langBtn = langDropdown ? langDropdown.querySelector(".header__lang-btn") : null;
+
+    const isTouchDevice = !window.matchMedia("(hover: hover)").matches;
 
     if (langBtn && langDropdown) {
         langBtn.addEventListener("click", (e) => {
-            if (window.innerWidth <= 1024) {
-                e.stopPropagation(); // Не дает событию всплыть к документу и мгновенно закрыть меню
-                langDropdown.classList.toggle("_active"); // Открывает при первом клике, закрывает при втором
+            if (isTouchDevice) {
+                // Ищем, был ли клик именно по САМОЙ ссылке выбора нового языка (внутри списка)
+                const isLinkClick = e.target.closest(".header__lang-list a");
+
+                // Если кликнули по ссылке — разрешаем браузеру перейти на другую страницу
+                if (isLinkClick) {
+                    return; 
+                }
+
+                // Если кликнули по главной верхней кнопке — переключаем меню
+                e.preventDefault();
+                e.stopPropagation();
+                langDropdown.classList.toggle("_active");
             }
         });
     }
 
     // Клик в любое другое место экрана гарантированно закрывает выпадающий список языков
     document.addEventListener("click", (e) => {
-        if (window.innerWidth <= 1024 && langDropdown) {
+        if (isTouchDevice && langDropdown) {
             if (!langDropdown.contains(e.target)) {
                 langDropdown.classList.remove("_active");
             }
@@ -32,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         burgerIcon.addEventListener("click", () => {
             burgerIcon.classList.toggle("is-open");
             headerMenu.classList.toggle("is-open");
-            body.classList.toggle("lock"); // Блокирует прокрутку сайта под меню
+            body.classList.toggle("lock");
         });
     }
 });

@@ -249,14 +249,9 @@ body {
   color: #fff;
   font-size: 16px;
   z-index: 110;
+  order: 3;
 }
-@media (max-width: 767px) {
-  .header__lang-dropdown {
-    order: 2;
-    margin-left: auto;
-  }
-}
-@media (min-width: 1025px) {
+@media (hover: hover) {
   .header__lang-dropdown:hover .header__lang-list {
     opacity: 1;
     visibility: visible;
@@ -273,6 +268,11 @@ body {
 }
 .header__lang-dropdown._active .header__lang-arrow {
   transform: rotate(-180deg);
+}
+@media (max-width: 767px) {
+  .header__lang-dropdown {
+    margin-left: auto;
+  }
 }
 .header__burger-icon {
   display: none;
