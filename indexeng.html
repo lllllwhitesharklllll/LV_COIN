@@ -12,37 +12,46 @@
     <div class="wrapper">
         <header class="header">
             <div class="header__container container">
+                <!-- Логотип -->
                 <a href="indexeng.html" class="header__logo">
                     <img src="img/header/LVCOIN.png" alt="Logotip LVCOIN" width="140" height="31">
                 </a>
+
+                <!-- Навигация -->
                 <nav class="header__menu">
                     <ul class="header__list">
-                        <li class="header__item">
-                            <a href="#hero" class="header__link">Home</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#oppo" class="header__link">Opportunities</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#partners" class="header__link">Partners</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#contact" class="header__link">Contacts</a>
-                        </li>
+                        <li class="header__item"><a href="#hero" class="header__link">Home</a></li>
+                        <li class="header__item"><a href="#oppo" class="header__link">Opportunities</a></li>
+                        <li class="header__item"><a href="#partners" class="header__link">Partners</a></li>
+                        <li class="header__item"><a href="#contact" class="header__link">Contacts</a></li>
                     </ul>
                 </nav>
+
+                <!-- Выпадающий список языков -->
                 <div class="header__lang-dropdown">
-                    <a href="#" class="header__lang-btn header__lang-btn--eng">
-                        <img src="img/header/iconeng.png" alt="Flag of Great Britain" width="24" height="24">ENG
-                    </a>
+                    <!-- Заменено на button и добавлены теги span + стрелочка, как в РУС версии -->
+                    <button type="button" class="header__lang-btn header__lang-btn--eng">
+                        <img src="img/header/iconeng.png" alt="Flag of Great Britain" width="24" height="24">
+                        <span>ENG</span>
+                        <span class="header__lang-arrow"></span>
+                    </button>
+
                     <div class="header__lang-list">
                         <a href="index.html" class="header__lang-btn header__lang-btn--rus">
-                            <img src="img/header/iconrus.png" alt="Flag of Russia" width="24" height="24">РУС
+                            <img src="img/header/iconrus.png" alt="Flag of Russia" width="24" height="24">
+                            <span>РУС</span>
                         </a>
                     </div>
                 </div>
+
+                <!-- Кнопка бургера (Добавлена в самый конец, как в вашей русской разметке) -->
+                <button type="button" class="header__burger-icon">
+                    <span></span>
+                </button>
+
             </div>
         </header>
+
 
         <main class="content">
             <section id="hero" class="hero">
@@ -228,6 +237,7 @@
             </div>
         </footer>
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

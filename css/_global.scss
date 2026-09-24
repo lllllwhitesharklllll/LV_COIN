@@ -17,7 +17,7 @@ body {
     margin: 0 auto;
     padding: 0 40px;
 
-    @media (max-width: 746px) {
+    @media (max-width: 900px) {
         padding: 0px 20px;
     }
 }
@@ -33,12 +33,12 @@ body {
 #contact {
     scroll-margin-top: 90px;
 }
-@media (max-width: 550px) {
+@media (max-width: 767px) {
     #hero,
     #oppo,
     #partners,
     #contact {
-        scroll-margin-top: 160px;
+        scroll-margin-top: 290px;
     }
 }
 .title {
